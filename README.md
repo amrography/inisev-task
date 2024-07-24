@@ -8,6 +8,10 @@ Whenever a new post is published on a particular website, all it's subscribers s
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
+- [Usage](#usage)
+  - [Postman collection](#postman-collection)
+  - [Run command manually](#run-command-manually)
+  - [Or run via schedule](#or-run-via-schedule)
 - [Todo](#todo)
 - [OPTIONAL](#optional)
 
@@ -65,17 +69,35 @@ php artisan serve
 
 This will start the development server and you can view the project in your browser at `http://localhost:8000/`, or check your terminal output for more details
 
+## Usage
+
+### Postman collection
+
+<!-- TODO ------------------------------------ -->
+
+### Run command manually
+
+```sh
+php artisan app:send-posts-to-subscribers
+```
+
+### Or run via schedule
+
+```sh
+
+```
+
 ## Todo
 
 - [x] Create the required migrations for websites and posts
 - [x] Seeded data of the websites
 - [x] Endpoint to create a "post" for a "particular website" with title and description.
 - [x] Create the required migrations for subscription
-- [ ] Endpoint to make a user subscribe to a "particular website" with all the tiny validations included in it.
-- [ ] Use of command to send email to the subscribers
-  - *command must check all websites and send all new posts to subscribers which haven't been sent yet*
-  - *Use of queues to schedule sending in background*
-  - *No duplicate stories should get sent to subscribers*
+- [x] Endpoint to make a user subscribe to a "particular website" with all the tiny validations included in it.
+- [x] Use of command to send email to the subscribers
+  - [ ] *Must check all websites and send all new posts to subscribers which haven't been sent yet*
+  - [ ] *Use of queues to schedule sending in background*
+  - [ ] *No duplicate stories should get sent to subscribers*
 
 ## OPTIONAL
 
