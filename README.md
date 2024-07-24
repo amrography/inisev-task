@@ -40,7 +40,7 @@ git clone git@github.com:amrography/inisev-task.git
 cd inisev-task
 ```
 
-4. **Copy `.env` file`
+4. **Copy `.env` file`**
 
 ```sh
 cp .env.example .env
