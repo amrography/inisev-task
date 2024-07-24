@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "817b6235-abdd-4400-a19e-03675f96ee5a",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15381913"
+	},
+	"item": [
+		{
+			"name": "Create post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website_id",
+							"value": "1",
+							"description": "by default I seeded 10 websites, try id from 1 - 10",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "",
+							"description": "not required",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "",
+							"description": "not required",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website_id",
+							"value": "1",
+							"description": "1 - 10 ( if you run the seed command)",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "6",
+							"description": "1 - 10  ( if you run the seed command)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/website/subscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"website",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

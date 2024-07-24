@@ -15,7 +15,6 @@ Whenever a new post is published on a particular website, all it's subscribers s
     - [Run command manually](#run-command-manually)
     - [Or run via schedule](#or-run-via-schedule)
 - [Todo](#todo)
-- [OPTIONAL](#optional)
 
 ## Prerequisites
 
@@ -75,9 +74,13 @@ This will start the development server and you can view the project in your brow
 
 ### Postman collection
 
-<!-- TODO ------------------------------------ -->
+You can find the postman collection here: [postman_collection.json](./docs/postman_collection.json)
 
 ### Sending the emails
+
+Before running the command make sure:
+    - You've created enough posts
+    - Subscribed some users to websites
 
 #### Run the queue first
 
@@ -108,7 +111,4 @@ php artisan schedule:work
   - [x] *Must check all websites and send all new posts to subscribers which haven't been sent yet*
   - [x] *No duplicate stories should get sent to subscribers*
   - [x] *Use of queues to schedule sending in background*
-
-## OPTIONAL
-
-- Open API documentation (or) Postman collection demonstrating available APIs & their usage.
+- [x] Postman collection demonstrating available APIs & their usage
