@@ -10,8 +10,10 @@ Whenever a new post is published on a particular website, all it's subscribers s
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
   - [Postman collection](#postman-collection)
-  - [Run command manually](#run-command-manually)
-  - [Or run via schedule](#or-run-via-schedule)
+  - [Sending the emails](#sending-the-emails)
+    - [Run the queue first](#run-the-queue-first)
+    - [Run command manually](#run-command-manually)
+    - [Or run via schedule](#or-run-via-schedule)
 - [Todo](#todo)
 - [OPTIONAL](#optional)
 
@@ -75,16 +77,24 @@ This will start the development server and you can view the project in your brow
 
 <!-- TODO ------------------------------------ -->
 
-### Run command manually
+### Sending the emails
+
+#### Run the queue first
+
+```sh
+php artisan queue:work # default queue is database, on .env
+```
+
+#### Run command manually
 
 ```sh
 php artisan app:send-posts-to-subscribers
 ```
 
-### Or run via schedule
+#### Or run via schedule
 
 ```sh
-
+php artisan schedule:work
 ```
 
 ## Todo
@@ -97,11 +107,8 @@ php artisan app:send-posts-to-subscribers
 - [x] Use of command to send email to the subscribers
   - [x] *Must check all websites and send all new posts to subscribers which haven't been sent yet*
   - [x] *No duplicate stories should get sent to subscribers*
-  - [ ] *Use of queues to schedule sending in background*
+  - [x] *Use of queues to schedule sending in background*
 
 ## OPTIONAL
 
 - Open API documentation (or) Postman collection demonstrating available APIs & their usage.
-- Use of contracts & services.
-- Use of caching wherever applicable.
-- Use of events/listeners.
