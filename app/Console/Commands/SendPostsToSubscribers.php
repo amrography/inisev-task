@@ -15,13 +15,17 @@ class SendPostsToSubscribers extends Command
 
     public function handle()
     {
-        $posts = Post::with('website.subscribers')
+        $posts = Post::with(['website.subscribers'])
             ->get();
 
         $posts->each(function (Post $post) {
-            // todo: we need to check subscriber is already got the post mail or not
             $post->website->subscribers->each(function (User $user) use ($post) {
+                if ($user->sentPosts()->wherePivot('post_id', $post->id)->exists()) {
+                    return;
+                }
+
                 $user->notify(new NewPost($post));
+                $this->info("Sending postId: {$post->id} to userId: {$user->id}");
             });
         });
 

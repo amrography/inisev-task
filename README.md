@@ -95,9 +95,9 @@ php artisan app:send-posts-to-subscribers
 - [x] Create the required migrations for subscription
 - [x] Endpoint to make a user subscribe to a "particular website" with all the tiny validations included in it.
 - [x] Use of command to send email to the subscribers
-  - [ ] *Must check all websites and send all new posts to subscribers which haven't been sent yet*
+  - [x] *Must check all websites and send all new posts to subscribers which haven't been sent yet*
+  - [x] *No duplicate stories should get sent to subscribers*
   - [ ] *Use of queues to schedule sending in background*
-  - [ ] *No duplicate stories should get sent to subscribers*
 
 ## OPTIONAL
 

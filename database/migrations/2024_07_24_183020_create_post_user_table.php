@@ -12,14 +12,15 @@ return new class () extends Migration {
         // this is a pivot table to set sent subscription relation
         // between users and websites
         Schema::create('post_user', function (Blueprint $table) {
-            $table->foreignIdFor(User::class)
-                ->references('id')
-                ->on('users')
-                ->cascadeOnDelete();
             $table->foreignIdFor(Post::class)
                 ->references('id')
                 ->on('posts')
                 ->cascadeOnDelete();
+            $table->foreignIdFor(User::class)
+                ->references('id')
+                ->on('users')
+                ->cascadeOnDelete();
+            $table->unique(['post_id', 'user_id']);
         });
     }
 

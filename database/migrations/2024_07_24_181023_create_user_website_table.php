@@ -21,6 +21,7 @@ return new class extends Migration
                 ->references('id')
                 ->on('websites')
                 ->cascadeOnDelete();
+            $table->unique(['user_id', 'website_id']);
         });
     }
 

@@ -15,4 +15,9 @@ class Post extends Model
     {
         return $this->belongsTo(Website::class);
     }
+
+    public function subscribers()
+    {
+        return $this->belongsToMany(User::class, 'user_website', 'website_id');
+    }
 }
