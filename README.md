@@ -69,7 +69,7 @@ This will start the development server and you can view the project in your brow
 
 - [x] Create the required migrations for websites and posts
 - [x] Seeded data of the websites
-- [ ] Endpoint to create a "post" for a "particular website" with title and description.
+- [x] Endpoint to create a "post" for a "particular website" with title and description.
 - [ ] Create the required migrations for subscription
 - [ ] Endpoint to make a user subscribe to a "particular website" with all the tiny validations included in it.
 - [ ] Use of command to send email to the subscribers
