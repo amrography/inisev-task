@@ -68,7 +68,7 @@ This will start the development server and you can view the project in your brow
 ## Todo
 
 - [x] Create the required migrations for websites and posts
-- [ ] Seeded data of the websites
+- [x] Seeded data of the websites
 - [ ] Endpoint to create a "post" for a "particular website" with title and description.
 - [ ] Create the required migrations for subscription
 - [ ] Endpoint to make a user subscribe to a "particular website" with all the tiny validations included in it.
